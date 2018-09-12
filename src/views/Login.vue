@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <v-container>
     <h1>This is a login page</h1>
-  </div>
+  </v-container>
 </template>
 
 

@@ -1,22 +1,29 @@
 <template>
-  <div id="app" class="single-page">
+  <v-app>
+    <sidebar/>
     <navbar/>
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/login">Login</router-link> |
       <router-link to="/dashboard">Dashboard</router-link> |
       <router-link to="/main">Main</router-link>
-    </div>
-    <router-view class="flex-center"></router-view>
-  </div>
+    </div> -->
+    <v-content>
+      <v-fade-transition mode="out-in">
+        <router-view class="flex-center"></router-view>
+      </v-fade-transition>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/Navbar';
+import Sidebar from '@/components/Sidebar';
 
 export default {
   components: {
     Navbar,
+    Sidebar,
   },
 }
 </script>
@@ -32,26 +39,6 @@ export default {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-#nav {
-  padding: 30px;
-  a {
-    color: #2c3e50;
-    font-weight: bold;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-
-.single-page {
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .flex-container {

@@ -1,9 +1,9 @@
 <template>
-  <div class="home">
+  <v-container>
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <h1>This is a home page</h1>
-  </div>
+  </v-container>
 </template>
 
 <script>

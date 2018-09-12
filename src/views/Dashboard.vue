@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container>
     <h1>This is a dashboard page</h1>
-  </div>
+  </v-container>
 </template>
