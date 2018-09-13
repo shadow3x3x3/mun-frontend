@@ -2,12 +2,6 @@
   <v-app>
     <sidebar/>
     <navbar/>
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/dashboard">Dashboard</router-link> |
-      <router-link to="/main">Main</router-link>
-    </div> -->
     <v-content>
       <v-fade-transition mode="out-in">
         <router-view class="flex-center"></router-view>
