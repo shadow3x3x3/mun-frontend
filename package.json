@@ -25,6 +25,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.0.1",
     "eslint": "^5.5.0",
+    "eslint-loader": "^2.1.0",
     "eslint-plugin-html": "^4.0.5",
     "eslint-plugin-vue": "^4.7.1",
     "node-sass": "^4.9.0",
@@ -41,12 +42,15 @@
       "@vue/airbnb"
     ],
     "rules": {
-      "no-param-reassign": ["error", {
-        "props": true,
-        "ignorePropertyModificationsFor": [
-          "state"
-        ]
-      }]
+      "no-param-reassign": [
+        "error",
+        {
+          "props": true,
+          "ignorePropertyModificationsFor": [
+            "state"
+          ]
+        }
+      ]
     },
     "parserOptions": {
       "parser": "babel-eslint"
