@@ -34,21 +34,9 @@ export default {
 
 #app {
   color: #2c3e50;
-  text-align: center;
   font-family: 'Open Sans', 'Avenir', Helvetica, Arial, sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.flex-container {
-  display: flex;
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 </style>

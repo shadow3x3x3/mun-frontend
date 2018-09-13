@@ -1,8 +1,10 @@
 <template>
   <v-navigation-drawer
-    v-model="drawer"
-    permanent
-    absolute
+    app
+    fixed
+    :value="isCollapse"
+    mobile-break-point="740"
+    width="250"
   >
     <v-list class="pt-0" dense>
       <v-divider></v-divider>
@@ -22,17 +24,26 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
+  computed: {
+    ...mapGetters([
+      'sidebar'
+    ]),
+    isCollapse() {
+      return this.sidebar;
+    },
+  },
   data() {
     return {
-      drawer: false,
       items: [
-        { title: "Item 1", link: "dashboard" },
-        { title: "Item 2", link: "main" }
+        { title: 'Item 1', link: 'dashboard' },
+        { title: 'Item 2', link: 'main' },
       ],
-      right: null
+      right: null,
     };
-  }
+  },
 };
 </script>
 
