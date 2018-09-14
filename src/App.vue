@@ -4,7 +4,7 @@
     <navbar/>
     <v-content>
       <v-fade-transition mode="out-in">
-        <router-view class="flex-center"></router-view>
+        <router-view></router-view>
       </v-fade-transition>
     </v-content>
   </v-app>

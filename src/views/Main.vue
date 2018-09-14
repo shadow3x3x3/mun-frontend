@@ -37,28 +37,15 @@ export default {
   data() {
     return {
       cInfos: [
-        {id: 123, name: "A", abr: "B", ac: "B", status: "None"},
+        {
+          id: 123, name: 'A', abr: 'B', ac: 'B', status: 'None',
+        },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 
 <style lang="scss" scoped>
-
-.flex-container {
-  display: flex;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.center-table {
-  display: flex;
-  justify-content: center;
-}
-
 </style>

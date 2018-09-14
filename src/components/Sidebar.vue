@@ -38,9 +38,9 @@ export default {
   data() {
     return {
       items: [
-        { title: 'Dashboard', link: 'dashboard', icon: 'bubble_chart' },
-        { title: 'Main', link: 'main', icon: 'bubble_chart' },
-        { title: 'Home', link: 'home', icon: 'bubble_chart' },
+        { title: 'Dashboard', link: 'dashboard', icon: 'dashboard' },
+        { title: 'Main', link: 'main', icon: 'message' },
+        { title: 'Home', link: 'home', icon: 'home' },
       ],
       right: null,
     };

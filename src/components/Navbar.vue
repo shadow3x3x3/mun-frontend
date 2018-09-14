@@ -1,6 +1,7 @@
 <template>
-  <v-toolbar light app color="blue">
+  <v-toolbar dark app color="blue">
     <v-toolbar-side-icon @click="toggleSidebar"></v-toolbar-side-icon>
+    <v-toolbar-title class="body-2" @click="toggleSidebar">Title</v-toolbar-title>
   </v-toolbar>
 </template>
 
