@@ -6,16 +6,16 @@
     mobile-break-point="740"
     width="250"
   >
-    <v-list class="pt-0" dense>
+    <v-list class="pt-0">
       <v-divider></v-divider>
 
-      <v-list-tile
-        v-for="item in items"
-        :key="item.title"
-      >
+      <v-list-tile v-for="item in items" :key="item.title">
+        <v-list-tile-action>
+          <v-icon v-html="item.icon"></v-icon>
+        </v-list-tile-action>
         <v-list-tile-content>
           <router-link :to="{ path: item.link }">
-            <v-list-tile-title class="item">{{ item.title }}</v-list-tile-title>
+            <v-list-tile-title v-text="item.title"></v-list-tile-title>
           </router-link>
         </v-list-tile-content>
       </v-list-tile>
@@ -38,8 +38,9 @@ export default {
   data() {
     return {
       items: [
-        { title: 'Item 1', link: 'dashboard' },
-        { title: 'Item 2', link: 'main' },
+        { title: 'Dashboard', link: 'dashboard', icon: 'bubble_chart' },
+        { title: 'Main', link: 'main', icon: 'bubble_chart' },
+        { title: 'Home', link: 'home', icon: 'bubble_chart' },
       ],
       right: null,
     };
