@@ -1,5 +1,5 @@
 const getters = {
-  sidebar: state => state.moduleApp.sidebar,
+  sidebar: state => state.app.sidebar,
 };
 
 export default getters;
