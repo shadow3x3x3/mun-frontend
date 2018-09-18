@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import moduleApp from './app/store';
+import moduleApp from './app';
 
 import getters from './getter';
 

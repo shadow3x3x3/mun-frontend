@@ -19,7 +19,7 @@ export default {
     Navbar,
     Sidebar,
   },
-}
+};
 </script>
 
 

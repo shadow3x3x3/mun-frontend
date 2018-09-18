@@ -1,7 +1,7 @@
 <template>
   <v-toolbar dark app color="blue">
     <v-toolbar-side-icon @click="toggleSidebar"></v-toolbar-side-icon>
-    <v-toolbar-title class="body-2" @click="toggleSidebar">Title</v-toolbar-title>
+    <v-toolbar-title @click="toggleSidebar">Title</v-toolbar-title>
   </v-toolbar>
 </template>
 
@@ -12,19 +12,18 @@ export default {
   name: 'Navbar',
   computed: {
     ...mapGetters([
-      'sidebar'
-    ])
+      'sidebar',
+    ]),
   },
   methods: {
     toggleSidebar() {
       this.$store.dispatch('toggleSidebar');
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 
 </style>
-
 

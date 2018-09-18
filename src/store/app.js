@@ -1,6 +1,6 @@
 import TOGGLE_SIDEBAR from './mutation-types';
 
-const moduleApp = {
+const app = {
   state: {
     sidebar: true,
   },
@@ -16,4 +16,4 @@ const moduleApp = {
   },
 };
 
-export default moduleApp;
+export default app;

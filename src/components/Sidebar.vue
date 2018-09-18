@@ -24,12 +24,12 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex';
 
 export default {
   computed: {
     ...mapGetters([
-      'sidebar'
+      'sidebar',
     ]),
     isCollapse() {
       return this.sidebar;
@@ -39,7 +39,7 @@ export default {
     return {
       items: [
         { title: 'Dashboard', link: 'dashboard', icon: 'dashboard' },
-        { title: 'Main', link: 'main', icon: 'message' },
+        { title: 'Main', link: 'main', icon: 'pets' },
         { title: 'Home', link: 'home', icon: 'home' },
       ],
       right: null,
