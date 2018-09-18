@@ -14,7 +14,7 @@
           <v-icon v-html="item.icon"></v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
-          <router-link :to="{ path: item.link }">
+          <router-link :to="{ name: item.link }">
             <v-list-tile-title v-text="item.title"></v-list-tile-title>
           </router-link>
         </v-list-tile-content>
