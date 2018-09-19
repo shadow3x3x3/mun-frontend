@@ -42,6 +42,7 @@ export default {
         { title: 'Main', link: 'main', icon: 'pets' },
         { title: 'Home', link: 'home', icon: 'home' },
         { title: 'Message', link: 'message', icon: 'message' },
+        { title: 'Topic', link: 'topic', icon: 'book' },
       ],
       right: null,
     };

@@ -32,6 +32,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "message" */ './views/Message.vue'),
     },
     {
+      path: '/topic',
+      name: 'topic',
+      component: () => import(/* webpackChunkName: "message" */ './views/Topic.vue'),
+    },
+    {
       path: '/main',
       name: 'main',
       component: Main,
