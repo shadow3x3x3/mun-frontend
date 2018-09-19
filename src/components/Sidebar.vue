@@ -41,6 +41,7 @@ export default {
         { title: 'Dashboard', link: 'dashboard', icon: 'dashboard' },
         { title: 'Main', link: 'main', icon: 'pets' },
         { title: 'Home', link: 'home', icon: 'home' },
+        { title: 'Message', link: 'message', icon: 'message' },
       ],
       right: null,
     };
