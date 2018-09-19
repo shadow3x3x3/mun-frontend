@@ -1,52 +1,42 @@
 <template>
   <v-container grid-list-md>
     <v-layout column wrap justify-center>
-      <v-flex>
-        <v-card>
-          <v-card-title primary-title>
-            <div>
-              <h3 class="headline mb-0">Kangaroo Valley Safari</h3>
-              <div>Located two hours south of Sydney in the.</div>
-            </div>
-          </v-card-title>
-          <v-card-actions>
-            <v-btn flat color="orange">Share</v-btn>
-            <v-btn flat color="orange">Explore</v-btn>
-          </v-card-actions>
-        </v-card>
+
+      <v-flex v-for="message in messages" :key="message.id">
+        <MessageCard v-bind="message"></MessageCard>
       </v-flex>
 
-      <v-flex>
-        <v-card>
-          <v-card-title primary-title>
-            <div>
-              <h3 class="headline mb-0">Kangaroo Valley Safari</h3>
-              <div>Located two hours south of Sydney in the.</div>
-            </div>
-          </v-card-title>
-          <v-card-actions>
-            <v-btn flat color="orange">Share</v-btn>
-            <v-btn flat color="orange">Explore</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import MessageCard from '@/components/MessageCard.vue';
+
 export default {
+  components: {
+    MessageCard,
+  },
   data() {
     return {
       messages: [
         {
-
+          id: 1,
+          object: 'Taiwan',
+          date: 'Now',
+          content: 'This is Taiwan message',
         },
         {
-
+          id: 2,
+          object: 'USA',
+          date: 'Now',
+          content: 'This is USA message',
         },
         {
-
+          id: 3,
+          object: 'Japan',
+          date: 'Now',
+          content: 'This is Japan message',
         },
       ],
     };
