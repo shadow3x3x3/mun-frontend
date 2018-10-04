@@ -6,15 +6,8 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-
 export default {
   name: 'Navbar',
-  computed: {
-    ...mapGetters([
-      'sidebar',
-    ]),
-  },
   methods: {
     toggleSidebar() {
       this.$store.dispatch('toggleSidebar');
