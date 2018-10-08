@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar dark app color="grey darken-2">
+  <v-toolbar dark app clipped-left color="grey darken-2">
     <v-toolbar-side-icon @click="toggleSidebar"></v-toolbar-side-icon>
     <router-link to="/dashboard">
       <v-img src="https://picsum.photos/110/100?random"></v-img>
