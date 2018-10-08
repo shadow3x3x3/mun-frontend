@@ -1,7 +1,20 @@
 <template>
-  <v-toolbar dark app color="blue">
+  <v-toolbar dark app color="grey darken-2">
     <v-toolbar-side-icon @click="toggleSidebar"></v-toolbar-side-icon>
-    <v-toolbar-title @click="toggleSidebar">Title</v-toolbar-title>
+    <router-link to="/dashboard">
+      <v-img src="https://picsum.photos/110/100?random"></v-img>
+    </router-link>
+
+    <v-spacer></v-spacer>
+
+    <v-btn icon>
+      <v-icon>add_alert</v-icon>
+    </v-btn>
+
+    <v-avatar size="30px">
+      <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John">
+    </v-avatar>
+
   </v-toolbar>
 </template>
 
