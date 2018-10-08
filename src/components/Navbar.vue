@@ -12,7 +12,7 @@
     </v-btn>
 
     <v-avatar size="30px">
-      <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John">
+      <img src="https://sj.xiaopi.com/uploadfile/2014/0209/20140209045444189.jpg" alt="John">
     </v-avatar>
 
   </v-toolbar>
