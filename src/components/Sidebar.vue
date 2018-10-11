@@ -38,7 +38,7 @@
         v-for="item in items"
         :key="item.title"
         :to="{ name: item.link }"
-        active-class="white"
+        active-class="grey lighten-5"
       >
         <v-list-tile-action>
           <v-icon v-html="item.icon"></v-icon>
@@ -70,7 +70,7 @@ export default {
         { title: 'Dashboard', link: 'dashboard', icon: 'dashboard' },
         { title: 'Main', link: 'main', icon: 'pets' },
         { title: 'Home', link: 'home', icon: 'home' },
-        { title: 'Message', link: 'message', icon: 'message' },
+        { title: 'Note Passing', link: 'message', icon: 'message' }, // TODO: Should uniform naming
         { title: 'Topic', link: 'topic', icon: 'book' },
       ],
       right: null,
