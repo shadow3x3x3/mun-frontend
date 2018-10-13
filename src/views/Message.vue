@@ -2,7 +2,7 @@
   <v-container fluid grid-list-md class="full-block">
     <v-layout row wrap>
 
-      <v-toolbar flat height="55%" color="grey lighten-1">
+      <v-toolbar flat height="50px" color="grey lighten-1">
         <v-btn icon>
           <v-icon>create</v-icon>
         </v-btn>
@@ -15,11 +15,11 @@
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <v-text-field
-          hide-details
-          prepend-icon="search"
-          single-line
-          color="black"
-        ></v-text-field>
+          placeholder="Search"
+          height="40px"
+          color="white"
+        >
+        </v-text-field>
       </v-toolbar>
 
       <v-flex xs3 class="selector">
@@ -29,6 +29,7 @@
               :key="index"
               avatar
               @click="selectedObject = object.id"
+              class="objects-list"
             >
               <v-list-tile-content>
                 <v-list-tile-title> {{ object.country }} </v-list-tile-title>
@@ -46,7 +47,6 @@
                 <v-icon color="grey darken-0" v-html="leastMesg(index).status"></v-icon>
               </v-list-tile-action>
             </v-list-tile>
-            <v-divider :key="index"></v-divider>
           </template>
         </v-list>
       </v-flex>
@@ -56,7 +56,7 @@
           v-for="(message, index) in objects[selectedObject].messages"
           :key="index"
         >
-          <v-card class="white--text message-card" flat>
+          <v-card class="grey--text text--darken-3 message-card" flat>
             <v-card-title primary-title class="message-title">
               <div class="headline" v-if="isTX(message.direction)">
                 {{ objects[selectedObject].country }}
@@ -137,14 +137,14 @@ export default {
             {
               date: '10:58',
               topic: 'Topic 2',
-              content: 'Whats up',
+              content: 'Lorem ipsum dolor sit amet, potenti arcu nec rhoncus malesuada vitae velit. Quis id quis, metus sed nisl, suspendisse a posuere at nunc a, morbi quisque, nulla metus in leo. Ut tellus nam sapien. Platea molestie odio ridiculus. A nec quis magnis mattis donec massa, class lacinia praesent urna purus condimentum amet, mauris pellentesque. Sem morbi in. Pede commodo tellus ornare dignissim sed, nam et ultrices eu est magna, id pellentesque, nec et. Massa dui luctus turpis ut adipiscing quis, pellentesque molestie neque, convallis dictum justo pretium mattis pellentesque. Purus suspendisse sit tincidunt, faucibus erat bibendum. Vestibulum tincidunt sollicitudin arcu etiam egestas. Mauris dignissim consectetuer suspendisse tincidunt, felis vel lacus sit, eros purus condimentum lectus duis molestie.',
               status: 'fiber_manual_record',
               direction: RX,
             },
             {
               date: '11:54',
               topic: 'Topic 3',
-              content: 'Be quite.',
+              content: 'Lorem ipsum dolor sit amet, potenti arcu nec rhoncus malesuada vitae velit. Quis id quis, metus sed nisl, suspendisse a posuere at nunc a, morbi quisque, nulla metus in leo. Ut tellus nam sapien. Platea molestie odio ridiculus. A nec quis magnis mattis donec massa, class lacinia praesent urna purus condimentum amet, mauris pellentesque. Sem morbi in. Pede commodo tellus ornare dignissim sed, nam et ultrices eu est magna, id pellentesque, nec et. Massa dui luctus turpis ut adipiscing quis, pellentesque molestie neque, convallis dictum justo pretium mattis pellentesque. Purus suspendisse sit tincidunt, faucibus erat bibendum. Vestibulum tincidunt sollicitudin arcu etiam egestas. Mauris dignissim consectetuer suspendisse tincidunt, felis vel lacus sit, eros purus condimentum lectus duis molestie.',
               status: 'access_time',
               direction: TX,
             },
@@ -207,7 +207,7 @@ export default {
 .element-block {
   overflow: auto;
   padding: 0px;
-  height: calc(100vh - 12vh);
+  height: calc(100vh - 50px - 50px);
   border: solid #E0E0E0;
   border-width: 0px 1px 0px 1px;
 }
@@ -218,6 +218,11 @@ export default {
 
 .messager {
   @extend .element-block;
+}
+
+.objects-list {
+  border: solid #E0E0E0;
+  border-width: 0px 0px 1px 0px;
 }
 
 .message-title {
