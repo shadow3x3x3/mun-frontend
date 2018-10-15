@@ -56,7 +56,11 @@
           v-for="(message, index) in objects[selectedObject].messages"
           :key="index"
         >
-          <v-card class="grey--text text--darken-3 message-card" flat>
+          <v-card
+            class="grey--text text--darken-3 message-card"
+            :style="cardStyle(message.direction)"
+            flat
+          >
             <v-card-title primary-title class="message-title">
               <div class="headline" v-if="isTX(message.direction)">
                 {{ objects[selectedObject].country }}
@@ -187,6 +191,13 @@ export default {
     isTX(direction) {
       return direction === TX;
     },
+    cardStyle(x) {
+      return x === TX ? {
+        'background-color': 'rgba(123, 124, 127, 0.45)',
+      } : {
+        'background-color': 'rgba(123, 124, 127, 0.20)',
+      };
+    },
   },
   created() {
     // TODO: Fetch latest messages
@@ -234,10 +245,6 @@ export default {
   font-weight: 600;
   border: solid #E0E0E0;
   border-width: 0px 0px 1px 0px;
-}
-
-.message-card {
-  background-color: rgba(123, 124, 127, 0.35);
 }
 
 .message-text {
