@@ -1,3 +1,2 @@
-const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR';
-
-export default TOGGLE_SIDEBAR;
+export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR';
+export const UPDATE_SIDEBAR = 'UPDATE_SIDEBAR';

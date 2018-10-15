@@ -4,7 +4,7 @@
     fixed
     floating
     clipped
-    :value="isCollapse"
+    v-model="sidebar"
     mobile-break-point="740"
     width="250"
     class="grey lighten-2"
@@ -25,7 +25,7 @@
               <p>Host # PAS</p>
               <p>User # DE-31</p>
               <p>Conference # C-A21</p>
-              <p>Country # KR</p>
+              <p>Country # 调査兵団</p>
             </v-flex>
           </v-flex>
 
@@ -60,8 +60,13 @@ export default {
     ...mapGetters([
       'sidebar',
     ]),
-    isCollapse() {
-      return this.sidebar;
+    sidebar: {
+      get() {
+        return this.$store.getters.sidebar;
+      },
+      set(val) {
+        this.$store.dispatch('updateSidebar', val);
+      },
     },
   },
   data() {
